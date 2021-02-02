@@ -23,6 +23,7 @@ const getFieldsData = () => {
   const movieImageURL = document.getElementById("image-url").value;
   const movieRating = document.getElementById("rating").value;
   addItem(new Movie(movieTitle, movieImageURL,movieRating));
+  toggleMovieModel();
 };
 const addItem = (movie)=> {
   const ul = document.getElementById("movie-list");
@@ -45,6 +46,8 @@ const addItem = (movie)=> {
   h2.appendChild(document.createTextNode(movie.title));
   p.appendChild(document.createTextNode(movie.rating));
   img.setAttribute("src",movie.imageURL);
+
+
 }
 
 startMovieButton.addEventListener("click", toggleMovieModel);
